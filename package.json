@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "nest build",
+    "serve:dev": "npx ts-node-dev src/main.ts",
+    "dev": "npx concurrently \"npm run build\" \"npm run dev:run\"",
+    "dev:watch": "npx ts-node-dev src/main.ts -w",
+    "build": "npx typescript",
+    "build:watch": "npx typescript -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
